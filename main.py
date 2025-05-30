@@ -62,11 +62,15 @@ async def update_channel_name():
     except Exception as e:
         print("Erreur lors de la mise à jour du salon :", e)
 
-# === Lancement du bot ===
 @bot.event
 async def on_ready():
-    print(f"✅ Connecté en tant que {bot.user}")
-    update_channel_name.start()
+    print(f"✅ Connecté en tant que {bot.user} !")
+
+    # Changer le statut du bot
+    activity = discord.Game(name="Regarde /help | 📺 Kaytox_27")
+    await bot.change_presence(status=discord.Status.online, activity=activity)
+    print("✅ Statut mis à jour !")
+
 
 keep_alive()
 bot.run(DISCORD_TOKEN)
