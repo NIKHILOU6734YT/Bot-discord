@@ -67,7 +67,7 @@ async def on_ready():
     print(f"✅ Connecté en tant que {bot.user} !")
 
     # Changer le statut du bot
-    activity = discord.Game(name="Regarde /help | 📺 Kaytox_27")
+    activity = discord.Game(name="Regarde 🎮OX Team🎮 | 📺 Kaytox_27")
     await bot.change_presence(status=discord.Status.online, activity=activity)
     print("✅ Statut mis à jour !")
 
