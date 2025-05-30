@@ -57,7 +57,7 @@ async def update_channel_name():
         subs = response["items"][0]["statistics"]["subscriberCount"]
         guild = bot.get_guild(SERVER_ID)
         channel = guild.get_channel(CHANNEL_ID)
-        await channel.edit(name=f"{subs} abonnés")
+        await channel.edit(name=f"📊• {subs} abonnés")
         print(f"✅ Salon mis à jour : {subs} abonnés")
     except Exception as e:
         print("Erreur lors de la mise à jour du salon :", e)
